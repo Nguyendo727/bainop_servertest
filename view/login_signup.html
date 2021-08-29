@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/login_signup.css" class="css">
+    <link rel="stylesheet" href="../public/css/loading.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <title>Login Or SignUp</title>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+    </div>
+    <div class="cotn_principal">
+        <div class="cont_centrar">
+            <div class="cont_login">
+                <div class="cont_info_log_sign_up">
+                    <div class="col_md_login">
+                        <div class="cont_ba_opcitiy">
+
+                            <h2>LOGIN</h2>
+                            <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                        </div>
+                    </div>
+                    <div class="col_md_sign_up">
+                        <div class="cont_ba_opcitiy">
+                            <h2>SIGN UP</h2>
+                            <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_back_info">
+                    <div class="cont_img_back_grey">
+                        <img src="../public/image/Untitled-1.jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="cont_forms">
+                    <div class="cont_img_back_">
+                        <img src="../public/image/Untitled-1.jpg" alt="">
+                    </div>
+                    <div class="cont_form_login">
+                        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                        <h2>LOGIN</h2>
+                        <input type="text" id='login_username' placeholder="Email" />
+                        <input type="password" id='login_password' placeholder="Password" />
+                        <button class="btn btn-outline-secondary_login" type="button" id="btnPassword_login">
+                            <span class="fas fa-eye-slash show_login"></span>
+                        </button>
+                        <div class="ouputdata1">
+
+                        </div>
+                        <button class="btn_login_site" onclick="login()">LOGIN</button>
+
+                    </div>
+
+                    <div class="cont_form_sign_up">
+                        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                        <h2>SIGN UP</h2>
+                        <input type="text" id="signup_email" placeholder="Email" />
+                        <input type="text" id="signup_user" placeholder="User" />
+                        <input type="password" id="signup_password" placeholder="Password" />
+                        <button class="btn btn-outline-secondary" type="button" id="btnPassword1">
+                            <span class="fas fa-eye-slash show1"></span>
+                        </button>
+                        <input type="password" id="signup_confimpass" placeholder="Confirm Password" />
+                        <button class="btn btn-outline-secondary2" type="button" id="btnPassword2">
+                            <span class="fas fa-eye-slash show2"></span>
+                        </button>
+                        <div class="ouputdata">
+
+                        </div>
+                        <button class="btn_sign_up_site" onclick="sigup11()">SIGN UP</button>
+                        <div class="messenger">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../public/js/login.js"></script>
+<script src="../public/js/signup.js"></script>
+<script>
+    setTimeout(() => {
+        document.querySelector('.cotn_principal').setAttribute('style', 'display :  flex;');
+        document.querySelector('.loader').setAttribute('style', 'display :  none;');
+    }, 1500);
+    document.querySelector('.cotn_principal').setAttribute('style', 'display :  none;');
+</script>
+
+</html>
